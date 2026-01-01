@@ -9,6 +9,9 @@ const app = express();
 
 connectDB();
 
+// middleware
+app.use(express.json());
+
 app.use("/api/notes", notesRoutes);
 
 app.listen(process.env.PORT, () => {
