@@ -5,6 +5,5 @@
 .vscode/
 
 frontend/README.md
-frontend/vite.config.js
 frontend/public/
 frontend/eslint.config.js
