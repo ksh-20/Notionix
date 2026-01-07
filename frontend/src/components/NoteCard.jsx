@@ -23,4 +23,4 @@ const NoteCard = ({note}) => {
   </Link>
 }
 
-export default NoteCard
+export default NoteCard;
