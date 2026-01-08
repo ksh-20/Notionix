@@ -96,7 +96,7 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in `backend/` (or copy `.env.example` if you create one) with the following variables:
+Create a `.env` file in `backend/` with the following variables:
 
 ```
 PORT=5001
@@ -131,9 +131,13 @@ npm install
 npm run dev
 ```
 
-The frontend runs with Vite and is configured to expect the backend at `http://localhost:5001/api` (see `src/lib/axios.js`).
+Create a `.env` file in `frontend/` with the following variables:
 
-> Tip: For production, set an environment-specific base URL (e.g., `VITE_API_BASE_URL`) and update `src/lib/axios.js` to use `import.meta.env.VITE_API_BASE_URL`.
+```
+VITE_API_BASE_URL=<your_backend_api_base_url>
+```
+
+The frontend runs with Vite and is configured to expect the backend at `http://localhost:5001/api` (default).
 
 ---
 
