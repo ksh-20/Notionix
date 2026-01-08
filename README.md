@@ -21,7 +21,7 @@
 - Dev tools: Nodemon (backend), Vite (frontend)
 - Testing tools: Postman
 
-**Important packages (from package.json)**
+**Important packages to install using npm install**
 
 - Backend: `express`, `mongoose`, `@upstash/redis`, `@upstash/ratelimit`, `dotenv`, `cors`
 - Frontend: `react`, `react-dom`, `vite`, `axios`, `tailwindcss`, `daisyui`, `react-hot-toast`
@@ -66,15 +66,9 @@ frontend/
 ## ⚙️ Prerequisites
 
 - Node.js (recommended v18+)
-- npm
 - MongoDB (local or Atlas account)
 - Upstash account (for Redis rate limiting) — optional but recommended to reproduce rate limiting behavior
-- Postman
-
-Useful links:
-- Node.js: https://nodejs.org/
-- MongoDB Atlas: https://www.mongodb.com/cloud/atlas
-- Upstash: https://upstash.com/
+- Postman for testing
 
 ---
 
@@ -169,7 +163,7 @@ Base URL (default): `http://localhost:5001/api`
 
 - Rate limiting: If a client exceeds the rate limit, the backend returns `429 Too Many Requests` with `{ message: "Too Many Requests. Please try again later" }`.
 
-### cURL examples
+### CURL examples
 
 Create a note:
 
@@ -198,29 +192,31 @@ curl http://localhost:5001/api/notes
 
 ## ✅ Recommended Improvements
 
-- Make `BASE_URL` for Axios configurable with `VITE_API_BASE_URL`.
 - Add authentication (JWT) to scope rate-limiting per-user.
 - Add validation (e.g., `express-validator`) for request bodies.
-- Add unit and integration tests (Jest / Supertest) for the backend.
 
 ---
 
 ## ☁️ Deployment Notes
 
-- For backend hosting consider: Render, Railway, Heroku (deprecated on free tier), Fly.io, or DigitalOcean App Platform.
-- For frontend hosting consider: Vercel, Netlify, or static hosting from a CDN.
+- For backend hosting consider: Render
+- For frontend hosting consider: Vercel, Render, Netlify, or static hosting from a CDN.
 - Before deploying, set environment variables on your host (MongoDB URI, Upstash vars, `PORT`). Also update CORS origins from `http://localhost:5173` to your production frontend URL.
 
 ---
 
-## 📚 External Links
+## 📚 Useful Links
 
+- Node.js: https://nodejs.org/
 - Express: https://expressjs.com/
 - Mongoose: https://mongoosejs.com/
 - MongoDB Atlas: https://www.mongodb.com/cloud/atlas
-- Upstash Redis: https://upstash.com/
+- Upstash: https://upstash.com/
+- React: https://react.dev/learn
 - Vite: https://vitejs.dev/
-- React: https://reactjs.org/
+- React Hot Toast: https://react-hot-toast.com/
+- Daisy UI: https://daisyui.com/docs/themes/
+- TailwindCSS: https://tailwindcss.com/docs/installation/using-vite
 
 ---
 
